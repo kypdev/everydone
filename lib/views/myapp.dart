@@ -1,4 +1,5 @@
 import 'package:everydone/views/first_pressure.dart';
+import 'package:everydone/views/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -43,6 +44,7 @@ class _MyAppState extends State<MyApp> {
 
   Future _register() async {
     print('register');
+    Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage(),));
   }
 
   Future _forgotPassword() async {
