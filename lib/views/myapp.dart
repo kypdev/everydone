@@ -1,3 +1,4 @@
+import 'package:everydone/views/bottom_nav.dart';
 import 'package:everydone/views/first_pressure.dart';
 import 'package:everydone/views/register_page.dart';
 import 'package:flutter/material.dart';
@@ -23,15 +24,21 @@ class _MyAppState extends State<MyApp> {
     String _username = _usernameCtrl.text.trim();
     String _password = _passwordCtrl.text;
 
-    if (_formKey.currentState.validate()) {
-      print('username: ' + _username + ' ' + 'password: ' + _password);
-
-      Navigator.push(
+    Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FirstPressure(),
+            builder: (context) => BottomNav(),
           ));
-    }
+
+    // if (_formKey.currentState.validate()) {
+    //   print('username: ' + _username + ' ' + 'password: ' + _password);
+
+    //   Navigator.push(
+    //       context,
+    //       MaterialPageRoute(
+    //         builder: (context) => FirstPressure(),
+    //       ));
+    // }
   }
 
   Future _facebookSignin() async {
